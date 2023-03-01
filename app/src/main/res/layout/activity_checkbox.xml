@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".checkbox"
+    android:background="@color/domesticgored">
+
+
+    <TextView
+        android:id="@+id/question"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/options"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="80dp"
+        android:fontFamily="@font/poppins"
+        android:text="What services do you require?"
+        android:textColor="@color/white"
+        android:textSize="28dp"
+        android:textStyle="bold"
+        android:textAlignment="center"></TextView>
+
+    <CheckBox
+        android:id="@+id/options"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="90dp"
+        android:buttonTint="@color/white"
+        android:fontFamily="@font/poppins"
+        android:text="Bathroom Cleaning"
+        android:textColor="@color/white"
+        android:textSize="24dp"
+        android:textStyle="bold"></CheckBox>
+
+    <CheckBox
+        android:id="@+id/options2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/options"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="90dp"
+        android:buttonTint="@color/white"
+        android:fontFamily="@font/poppins"
+        android:text="Dish washing"
+        android:textColor="@color/white"
+        android:textSize="24dp"
+        android:textStyle="bold"></CheckBox>
+
+    <CheckBox
+        android:id="@+id/options3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/options2"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="90dp"
+        android:buttonTint="@color/white"
+        android:fontFamily="@font/poppins"
+        android:text="Dusting"
+        android:textColor="@color/white"
+        android:textSize="24dp"
+        android:textStyle="bold"></CheckBox>
+
+    <CheckBox
+        android:id="@+id/options4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/options3"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="90dp"
+        android:buttonTint="@color/white"
+        android:fontFamily="@font/poppins"
+        android:text="Sweeping"
+        android:textColor="@color/white"
+        android:textSize="24dp"
+        android:textStyle="bold"></CheckBox>
+
+    <Button
+        android:id="@+id/b1"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/options4"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/round_btn"
+        android:text="Next"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:fontFamily="@font/poppins"
+        ></Button>
+
+
+
+
+
+</RelativeLayout>

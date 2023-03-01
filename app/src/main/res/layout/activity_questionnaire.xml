@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/domesticgored"
+    tools:context=".Questionnaire">
+    <TextView
+        android:id="@+id/question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textAlignment="center"
+
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:fontFamily="@font/poppins"
+        android:textSize="28dp"
+        android:layout_above="@+id/ques"
+        android:layout_marginBottom="20dp"></TextView>
+    <LinearLayout
+        android:id="@+id/ques"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true">
+
+        <Button
+            android:id="@+id/A"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+
+            android:textStyle="bold"
+            android:textSize="14dp"
+            android:backgroundTint="@color/white"
+            android:fontFamily="@font/poppins"
+            android:textColor="@color/black"
+            android:layout_gravity="center"
+            ></Button>
+        <Button
+            android:id="@+id/B"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:backgroundTint="@color/white"
+            android:fontFamily="@font/poppins"
+
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="14dp"
+            android:layout_gravity="center"
+            ></Button>
+        <Button
+            android:id="@+id/C"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:backgroundTint="@color/white"
+            android:textStyle="bold"
+            android:textSize="14dp"
+            android:fontFamily="@font/poppins"
+
+            android:textColor="@color/black"
+            android:layout_gravity="center"
+            ></Button>
+        <Button
+            android:id="@+id/D"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:backgroundTint="@color/white"
+            android:textStyle="bold"
+            android:textSize="14dp"
+            android:fontFamily="@font/poppins"
+
+            android:textColor="@color/black"
+            android:layout_gravity="center"
+            ></Button>
+    </LinearLayout>
+
+    <Button
+
+        android:id="@+id/b1"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ques"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/round_btn"
+        android:fontFamily="@font/poppins"
+        android:text="Next"
+        android:textSize="20dp"
+        android:textStyle="bold"></Button>
+
+</RelativeLayout>
