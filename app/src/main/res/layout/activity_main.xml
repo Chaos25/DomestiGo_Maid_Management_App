@@ -8,7 +8,8 @@
     android:background="#BA274A"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    >
 
     <ImageView
         android:layout_width="227dp"
@@ -29,9 +30,10 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="30dp"
-        android:background="@drawable/custom_edittext"
+        app:cardBackgroundColor="@color/projectwhite"
         app:cardCornerRadius="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
         app:cardElevation="20dp">
 
         <LinearLayout
@@ -89,6 +91,7 @@
 
                 android:backgroundTint="@color/domesticgored"
                 android:text="Login"
+                android:textColor="@color/projectwhite"
                 android:textSize="18sp"
                 app:cornerRadius="20dp" />
 
@@ -101,7 +104,6 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
         android:padding="8dp"
-
         android:text="Not yet registered? Sign up."
         android:textAlignment="center"
         android:textColor="#F7F4F3"

@@ -97,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
                                     // intent to home activity
                                     Intent intent
                                             = new Intent(MainActivity.this,
-                                            checkbox.class);
+                                            dashboard.class);
                                     startActivity(intent);
                                 }
 

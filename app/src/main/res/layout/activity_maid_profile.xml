@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".maid_profile"
+    android:orientation="vertical"
+    android:background="@color/domesticgored">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/maid_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/poppins"
+            android:text="Maid Profiles"
+            android:textColor="@color/projectwhite"
+            android:textSize="25dp" />
+
+
+     <androidx.cardview.widget.CardView
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_margin="30dp"
+         app:cardBackgroundColor="@color/projectwhite"
+         app:cardCornerRadius="30dp"
+         app:cardElevation="20dp"
+         android:layout_below="@id/maid_page"
+         android:id="@+id/maid1"
+         android:padding="10dp">
+         <RelativeLayout
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             >
+             <ImageView
+                 android:layout_width="100dp"
+                 android:layout_height="100dp"
+                 android:background="@drawable/baseline_person_24"
+                 android:layout_margin="20dp"
+                 android:id="@+id/maid_image1"
+
+                 />
+
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_toEndOf="@id/maid_image1"
+                 android:text="Name: "
+                 android:layout_margin="10dp"
+                 android:textColor="@color/domesticgored"
+                 android:fontFamily="@font/poppins"
+                 android:textSize="18dp"
+                 android:id="@+id/maid_name_label1"
+                 />
+
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+
+                 android:layout_alignBaseline="@id/maid_name_label1"
+                 android:layout_margin="10dp"
+                 android:layout_toRightOf="@id/maid_name_label1"
+                 android:fontFamily="@font/poppins"
+                 android:text="Anita"
+                 android:textColor="@color/domesticgored"
+                 android:textSize="18dp"
+                 android:id="@+id/maid_name1"/>
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_below="@id/maid_name_label1"
+                 android:layout_toEndOf="@id/maid_image1"
+                 android:text="Age: "
+                 android:layout_margin="10dp"
+                 android:textColor="@color/domesticgored"
+                 android:fontFamily="@font/poppins"
+                 android:textSize="18dp"
+                 android:id="@+id/maid_age_label1"
+                 />
+
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_below="@id/maid_name1"
+                 android:layout_alignBaseline="@id/maid_age_label1"
+                 android:layout_margin="10dp"
+                 android:layout_toRightOf="@id/maid_age_label1"
+                 android:layout_alignStart="@id/maid_name1"
+                 android:fontFamily="@font/poppins"
+                 android:text="21"
+                 android:textColor="@color/domesticgored"
+                 android:textSize="15dp"
+                 android:id="@+id/maid_age1"/>
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_below="@id/maid_age_label1"
+                 android:layout_toEndOf="@id/maid_image1"
+                 android:text="Experience: "
+                 android:layout_margin="10dp"
+                 android:textColor="@color/domesticgored"
+                 android:fontFamily="@font/poppins"
+                 android:textSize="18dp"
+                 android:id="@+id/maid_exp_label1"
+                 />
+
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_below="@id/maid_age1"
+                 android:layout_alignBaseline="@id/maid_exp_label1"
+                 android:layout_margin="10dp"
+                 android:layout_toRightOf="@id/maid_exp_label1"
+                 android:fontFamily="@font/poppins"
+                 android:text="4+ Years"
+                 android:textColor="@color/domesticgored"
+                 android:textSize="15dp"
+                 android:id="@+id/maid_exp1"/>
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_below="@id/maid_exp_label1"
+                 android:layout_toEndOf="@id/maid_image1"
+                 android:text="Services: "
+                 android:layout_margin="10dp"
+                 android:textColor="@color/domesticgored"
+                 android:fontFamily="@font/poppins"
+                 android:textSize="18dp"
+                 android:id="@+id/maid_services_label1"
+                 />
+
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_below="@id/maid_age1"
+                 android:layout_alignBaseline="@id/maid_services_label1"
+                 android:layout_margin="10dp"
+                 android:layout_toRightOf="@id/maid_services_label1"
+                 android:fontFamily="@font/poppins"
+                 android:text="Cooking"
+                 android:textColor="@color/domesticgored"
+                 android:textSize="15dp"
+                 android:id="@+id/maid_services1"/>
+             <Button
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_below="@id/maid_services1"
+                 android:layout_centerHorizontal="true"
+                 android:layout_margin="25dp"
+                 android:text="Hire"
+                 android:textColor="@color/projectwhite"
+                 android:backgroundTint="@color/domesticgored"
+                 android:id="@+id/button1"
+                 />
+
+         </RelativeLayout>
+
+     </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            app:cardBackgroundColor="@color/projectwhite"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="20dp"
+            android:layout_below="@id/maid1"
+            android:id="@+id/maid2"
+            android:padding="10dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/baseline_person_24"
+                    android:layout_margin="20dp"
+                    android:id="@+id/maid_image2"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/maid_image2"
+                    android:text="Name: "
+                    android:layout_margin="10dp"
+                    android:textColor="@color/domesticgored"
+                    android:fontFamily="@font/poppins"
+                    android:textSize="18dp"
+                    android:id="@+id/maid_name_label2"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_alignBaseline="@id/maid_name_label2"
+                    android:layout_margin="10dp"
+                    android:layout_toRightOf="@id/maid_name_label2"
+                    android:fontFamily="@font/poppins"
+                    android:text="Anita"
+                    android:textColor="@color/domesticgored"
+                    android:textSize="18dp"
+                    android:id="@+id/maid_name2"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/maid_name_label2"
+                    android:layout_toEndOf="@id/maid_image2"
+                    android:text="Age: "
+                    android:layout_margin="10dp"
+                    android:textColor="@color/domesticgored"
+                    android:fontFamily="@font/poppins"
+                    android:textSize="18dp"
+                    android:id="@+id/maid_age_label2"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/maid_name2"
+                    android:layout_alignBaseline="@id/maid_age_label2"
+                    android:layout_margin="10dp"
+                    android:layout_toRightOf="@id/maid_age_label2"
+                    android:layout_alignStart="@id/maid_name2"
+                    android:fontFamily="@font/poppins"
+                    android:text="21"
+                    android:textColor="@color/domesticgored"
+                    android:textSize="15dp"
+                    android:id="@+id/maid_age2"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/maid_age_label2"
+                    android:layout_toEndOf="@id/maid_image2"
+                    android:text="Experience: "
+                    android:layout_margin="10dp"
+                    android:textColor="@color/domesticgored"
+                    android:fontFamily="@font/poppins"
+                    android:textSize="18dp"
+                    android:id="@+id/maid_exp_label2"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/maid_age2"
+                    android:layout_alignBaseline="@id/maid_exp_label2"
+                    android:layout_margin="10dp"
+                    android:layout_toRightOf="@id/maid_exp_label2"
+                    android:fontFamily="@font/poppins"
+                    android:text="4+ Years"
+                    android:textColor="@color/domesticgored"
+                    android:textSize="15dp"
+                    android:id="@+id/maid_exp2"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/maid_exp_label2"
+                    android:layout_toEndOf="@id/maid_image2"
+                    android:text="Services: "
+                    android:layout_margin="10dp"
+                    android:textColor="@color/domesticgored"
+                    android:fontFamily="@font/poppins"
+                    android:textSize="18dp"
+                    android:id="@+id/maid_services_label2"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/maid_age2"
+                    android:layout_alignBaseline="@id/maid_services_label2"
+                    android:layout_margin="10dp"
+                    android:layout_toRightOf="@id/maid_services_label2"
+                    android:fontFamily="@font/poppins"
+                    android:text="Cooking"
+                    android:textColor="@color/domesticgored"
+                    android:textSize="15dp"
+                    android:id="@+id/maid_services2"/>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/maid_services2"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="25dp"
+                    android:text="Hire"
+                    android:textColor="@color/projectwhite"
+                    android:backgroundTint="@color/domesticgored"
+                    android:id="@+id/button2"
+                    />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+    </RelativeLayout>
+
+</ScrollView>
