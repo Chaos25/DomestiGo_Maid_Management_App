@@ -40,51 +40,53 @@
              android:layout_width="match_parent"
              android:layout_height="match_parent"
              >
+
              <ImageView
+                 android:id="@+id/maid_image1"
                  android:layout_width="100dp"
                  android:layout_height="100dp"
-                 android:background="@drawable/baseline_person_24"
-                 android:layout_margin="20dp"
-                 android:id="@+id/maid_image1"
-
-                 />
+                 android:layout_centerHorizontal="true"
+                 android:layout_margin="10dp"
+                 android:background="@drawable/baseline_person_24" />
 
              <TextView
-                 android:layout_width="wrap_content"
-                 android:layout_height="wrap_content"
-                 android:layout_toEndOf="@id/maid_image1"
-                 android:text="Name: "
-                 android:layout_margin="10dp"
-                 android:textColor="@color/domesticgored"
-                 android:fontFamily="@font/poppins"
-                 android:textSize="18dp"
                  android:id="@+id/maid_name_label1"
-                 />
-
-             <TextView
                  android:layout_width="wrap_content"
                  android:layout_height="wrap_content"
-
-                 android:layout_alignBaseline="@id/maid_name_label1"
+                 android:layout_below="@id/maid_image1"
                  android:layout_margin="10dp"
+                 android:fontFamily="@font/poppins"
+                 android:text="Name: "
+                 android:textColor="@color/domesticgored"
+                 android:textSize="18dp" />
+
+             <TextView
+                 android:id="@+id/maid_name1"
+                 android:layout_width="wrap_content"
+
+                 android:layout_height="wrap_content"
+                 android:layout_alignBaseline="@id/maid_name_label1"
+                 android:layout_marginStart="10dp"
+                 android:layout_marginTop="10dp"
+                 android:layout_marginEnd="10dp"
+                 android:layout_marginBottom="10dp"
                  android:layout_toRightOf="@id/maid_name_label1"
                  android:fontFamily="@font/poppins"
                  android:text="Anita"
                  android:textColor="@color/domesticgored"
-                 android:textSize="18dp"
-                 android:id="@+id/maid_name1"/>
+                 android:textSize="18dp" />
+
              <TextView
+                 android:id="@+id/maid_age_label1"
                  android:layout_width="wrap_content"
                  android:layout_height="wrap_content"
                  android:layout_below="@id/maid_name_label1"
-                 android:layout_toEndOf="@id/maid_image1"
-                 android:text="Age: "
-                 android:layout_margin="10dp"
-                 android:textColor="@color/domesticgored"
+                android:layout_margin="10dp"
+
                  android:fontFamily="@font/poppins"
-                 android:textSize="18dp"
-                 android:id="@+id/maid_age_label1"
-                 />
+                 android:text="Age: "
+                 android:textColor="@color/domesticgored"
+                 android:textSize="18dp" />
 
              <TextView
                  android:layout_width="wrap_content"
@@ -103,7 +105,7 @@
                  android:layout_width="wrap_content"
                  android:layout_height="wrap_content"
                  android:layout_below="@id/maid_age_label1"
-                 android:layout_toEndOf="@id/maid_image1"
+
                  android:text="Experience: "
                  android:layout_margin="10dp"
                  android:textColor="@color/domesticgored"
@@ -124,18 +126,21 @@
                  android:textColor="@color/domesticgored"
                  android:textSize="15dp"
                  android:id="@+id/maid_exp1"/>
+
              <TextView
+                 android:id="@+id/maid_services_label1"
                  android:layout_width="wrap_content"
                  android:layout_height="wrap_content"
                  android:layout_below="@id/maid_exp_label1"
-                 android:layout_toEndOf="@id/maid_image1"
-                 android:text="Services: "
-                 android:layout_margin="10dp"
-                 android:textColor="@color/domesticgored"
+                 android:layout_marginStart="10dp"
+                 android:layout_marginTop="10dp"
+                 android:layout_marginEnd="10dp"
+                 android:layout_marginBottom="10dp"
+
                  android:fontFamily="@font/poppins"
-                 android:textSize="18dp"
-                 android:id="@+id/maid_services_label1"
-                 />
+                 android:text="Services: "
+                 android:textColor="@color/domesticgored"
+                 android:textSize="18dp" />
 
              <TextView
                  android:layout_width="wrap_content"
@@ -178,26 +183,25 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 >
+
                 <ImageView
+                    android:id="@+id/maid_image2"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:background="@drawable/baseline_person_24"
-                    android:layout_margin="20dp"
-                    android:id="@+id/maid_image2"
-
-                    />
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/baseline_person_24" />
 
                 <TextView
+                    android:id="@+id/maid_name_label2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_toEndOf="@id/maid_image2"
-                    android:text="Name: "
                     android:layout_margin="10dp"
-                    android:textColor="@color/domesticgored"
+                    android:layout_below="@id/maid_image2"
                     android:fontFamily="@font/poppins"
-                    android:textSize="18dp"
-                    android:id="@+id/maid_name_label2"
-                    />
+                    android:text="Name: "
+                    android:textColor="@color/domesticgored"
+                    android:textSize="18dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -211,18 +215,18 @@
                     android:textColor="@color/domesticgored"
                     android:textSize="18dp"
                     android:id="@+id/maid_name2"/>
+
                 <TextView
+                    android:id="@+id/maid_age_label2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/maid_name_label2"
-                    android:layout_toEndOf="@id/maid_image2"
-                    android:text="Age: "
                     android:layout_margin="10dp"
-                    android:textColor="@color/domesticgored"
+
                     android:fontFamily="@font/poppins"
-                    android:textSize="18dp"
-                    android:id="@+id/maid_age_label2"
-                    />
+                    android:text="Age: "
+                    android:textColor="@color/domesticgored"
+                    android:textSize="18dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -237,18 +241,17 @@
                     android:textColor="@color/domesticgored"
                     android:textSize="15dp"
                     android:id="@+id/maid_age2"/>
+
                 <TextView
+                    android:id="@+id/maid_exp_label2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/maid_age_label2"
-                    android:layout_toEndOf="@id/maid_image2"
-                    android:text="Experience: "
                     android:layout_margin="10dp"
-                    android:textColor="@color/domesticgored"
                     android:fontFamily="@font/poppins"
-                    android:textSize="18dp"
-                    android:id="@+id/maid_exp_label2"
-                    />
+                    android:text="Experience: "
+                    android:textColor="@color/domesticgored"
+                    android:textSize="18dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -262,18 +265,17 @@
                     android:textColor="@color/domesticgored"
                     android:textSize="15dp"
                     android:id="@+id/maid_exp2"/>
+
                 <TextView
+                    android:id="@+id/maid_services_label2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/maid_exp_label2"
-                    android:layout_toEndOf="@id/maid_image2"
-                    android:text="Services: "
                     android:layout_margin="10dp"
-                    android:textColor="@color/domesticgored"
                     android:fontFamily="@font/poppins"
-                    android:textSize="18dp"
-                    android:id="@+id/maid_services_label2"
-                    />
+                    android:text="Services: "
+                    android:textColor="@color/domesticgored"
+                    android:textSize="18dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
