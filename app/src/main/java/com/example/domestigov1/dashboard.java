@@ -28,7 +28,7 @@ public class dashboard extends AppCompatActivity {
         maidCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent myintent2 = new Intent(dashboard.this,maid_profile.class);
+                Intent myintent2 = new Intent(dashboard.this,MapsActivity.class);
                 startActivity(myintent2);
             }
         });
