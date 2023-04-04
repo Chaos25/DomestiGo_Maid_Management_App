@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".aboutus"
+    android:orientation="vertical"
+    android:background="@color/domesticgored">
+
+    <TextView
+        android:id="@+id/aboutusText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/poppins"
+        android:text="About Us"
+        android:textColor="@color/projectwhite"
+        android:textSize="40sp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DomestiGo is an app that helps users find maids nearby, book them on a daily, weekly or monthly basis. It also has location-based services to find the maids, a feature for users to review their hired maids, and so on. We aim to make it a norm for hiring domestic help in urban neighborhoods. We are college students trying to make this app accessible to everyone and make everyone's lives easier."
+        android:layout_below="@id/aboutusText"
+        android:layout_margin="10dp"
+        android:textColor="@color/projectwhite"
+        android:padding="10dp"
+        android:textSize="18sp"
+        android:id="@+id/aboutus_info"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/aboutus_info"
+        android:text="Our Team"
+        android:textSize="30sp"
+        android:textColor="@color/projectwhite"
+        android:fontFamily="@font/poppins"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:id="@+id/team_label"
+        />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/team_label"
+        android:id="@+id/kushal_layout"
+        >
+
+        <ImageView
+            android:id="@+id/kushal"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="15dp"
+            android:src="@drawable/team1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/kushal"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/poppins"
+            android:padding="5dp"
+            android:text="Kushal"
+            android:textColor="@color/projectwhite"
+            android:textSize="20dp" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/riddhi_layout"
+        android:layout_below="@id/team_label"
+        android:layout_toRightOf="@id/kushal_layout">
+
+        <ImageView
+            android:id="@+id/riddhi1"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="15dp"
+            android:src="@drawable/team3" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/riddhi1"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/poppins"
+            android:padding="5dp"
+            android:text="Riddhi"
+            android:textColor="@color/projectwhite"
+            android:textSize="20dp" />
+    </RelativeLayout>
+   <RelativeLayout
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:id="@+id/anoushka_layout"
+       android:layout_below="@id/team_label"
+       android:layout_toRightOf="@id/riddhi_layout">
+       <ImageView
+           android:id="@+id/anoushka"
+           android:layout_width="100dp"
+           android:layout_height="100dp"
+           android:layout_marginLeft="15dp"
+           android:layout_marginTop="15dp"
+           android:layout_marginBottom="15dp"
+           android:src="@drawable/team2" />
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_below="@id/anoushka"
+           android:text="Anoushka"
+           android:layout_centerInParent="true"
+           android:layout_margin="10dp"
+           android:padding="5dp"
+           android:textSize="20dp"
+           android:textColor="@color/projectwhite"
+           android:fontFamily="@font/poppins"
+           />
+
+   </RelativeLayout>
+
+
+
+</RelativeLayout>

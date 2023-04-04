@@ -17,10 +17,21 @@
         android:layout_centerHorizontal="true"
 
         />
-    <Button
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/map"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/citytag"
+        android:layout_margin="10dp"
+        android:textColor="@color/projectwhite"
+        android:textSize="25dp"
+        android:fontFamily="@font/poppins"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/citytag"
         android:layout_margin="10dp"
         android:layout_centerHorizontal="true"
         android:text="Find Maids Nearby"

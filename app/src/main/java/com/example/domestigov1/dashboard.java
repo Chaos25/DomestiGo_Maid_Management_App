@@ -10,7 +10,7 @@ import android.view.View;
 public class dashboard extends AppCompatActivity {
 
     CardView cleaningCard;
-    CardView assessCard,maidCard;
+    CardView assessCard,maidCard,aboutusCard;
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +18,7 @@ public class dashboard extends AppCompatActivity {
         setContentView(R.layout.activity_dashboard);
         assessCard= (CardView) findViewById(R.id.electronicCard);
         maidCard=(CardView) findViewById(R.id.maidsCard);
+        aboutusCard=(CardView) findViewById(R.id.aboutusCard);
         assessCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -32,5 +33,13 @@ public class dashboard extends AppCompatActivity {
                 startActivity(myintent2);
             }
         });
+        aboutusCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent myintent3 = new Intent(dashboard.this,aboutus.class);
+                startActivity(myintent3);
+            }
+        });
+
     }
 }

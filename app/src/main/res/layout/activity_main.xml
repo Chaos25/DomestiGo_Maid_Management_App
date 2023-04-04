@@ -61,7 +61,7 @@
                 android:layout_marginTop="40dp"
                 android:background="@drawable/custom_edittext"
                 android:drawableLeft="@drawable/baseline_email_24"
-
+                android:textColorHint="@color/grey"
                 android:drawablePadding="8dp"
                 android:hint="Email"
                 android:padding="8dp"
@@ -79,6 +79,7 @@
                 android:drawablePadding="8dp"
                 android:hint="Password"
                 android:inputType="textPassword"
+                android:textColorHint="@color/grey"
                 android:padding="8dp"
                 android:textColor="@color/black"
                 android:textColorHighlight="@color/cardview_dark_background" />

@@ -58,7 +58,7 @@
                 android:layout_marginTop="10dp"
                 android:background="@drawable/custom_edittext"
                 android:drawableLeft="@drawable/baseline_person_24"
-
+                android:textColorHint="@color/grey"
                 android:drawablePadding="8dp"
                 android:hint="Name"
                 android:padding="8dp"
@@ -71,7 +71,7 @@
                 android:layout_marginTop="10dp"
                 android:background="@drawable/custom_edittext"
                 android:drawableLeft="@drawable/baseline_email_24"
-
+                android:textColorHint="@color/grey"
                 android:drawablePadding="8dp"
                 android:hint="Email"
                 android:padding="8dp"
@@ -84,7 +84,7 @@
             <EditText
                 android:id="@+id/password"
                 android:layout_width="match_parent"
-
+                android:textColorHint="@color/grey"
                 android:layout_height="50dp"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/custom_edittext"
@@ -104,6 +104,7 @@
 
                 android:backgroundTint="@color/domesticgored"
                 android:text="sign up"
+                android:textColor="@color/projectwhite"
                 android:textSize="18sp"
                 app:cornerRadius="20dp" />
 
