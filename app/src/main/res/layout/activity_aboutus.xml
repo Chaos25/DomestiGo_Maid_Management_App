@@ -24,7 +24,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="DomestiGo is an app that helps users find maids nearby, book them on a daily, weekly or monthly basis. It also has location-based services to find the maids, a feature for users to review their hired maids, and so on. We aim to make it a norm for hiring domestic help in urban neighborhoods. We are college students trying to make this app accessible to everyone and make everyone's lives easier. and look cool while doing it."
+        android:text="DomestiGo is an app that helps users find maids nearby, book them on a daily, weekly or monthly basis. It also has location-based services to find the maids, a feature for users to review their hired maids, and so on. We aim to make it a norm for hiring domestic help in urban neighborhoods. We are college students trying to make this app accessible to everyone and make everyone's lives easier."
         android:layout_below="@id/aboutusText"
         android:layout_margin="10dp"
         android:textColor="@color/projectwhite"

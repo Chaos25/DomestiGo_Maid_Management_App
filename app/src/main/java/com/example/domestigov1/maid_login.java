@@ -16,10 +16,9 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 
 
-public class MainActivity extends AppCompatActivity {
+public class maid_login extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private TextView emailTextView ;
-
     private TextView passwordTextView ;
 
     private Button loginbtn;
@@ -27,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_maid_login);
 
 
         mAuth = FirebaseAuth.getInstance();
@@ -35,7 +34,6 @@ public class MainActivity extends AppCompatActivity {
 
         passwordTextView =(TextView) findViewById(R.id.password);
         loginbtn= (Button) findViewById(R.id.loginButton);
-
 
 
 
@@ -51,16 +49,8 @@ public class MainActivity extends AppCompatActivity {
         signuptext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent myintent = new Intent(MainActivity.this,signup.class);
+                Intent myintent = new Intent(maid_login.this, maidsignup.class);
                 startActivity(myintent);
-            }
-        });
-        TextView maidlogintext1 =(TextView) findViewById(R.id.maidlogintext);
-        maidlogintext1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent myintent1 = new Intent(MainActivity.this, maid_login.class);
-                startActivity(myintent1);
             }
         });
 
@@ -103,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
                                     // if sign-in is successful
                                     // intent to home activity
                                     Intent intent
-                                            = new Intent(MainActivity.this,
+                                            = new Intent(maid_login.this,
                                             dashboard.class);
                                     startActivity(intent);
                                 }
