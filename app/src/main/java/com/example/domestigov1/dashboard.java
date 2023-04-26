@@ -7,10 +7,21 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
 public class dashboard extends AppCompatActivity {
 
     CardView cleaningCard;
     CardView assessCard,maidCard,aboutusCard;
+    TextView dometigoname;
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +30,25 @@ public class dashboard extends AppCompatActivity {
         assessCard= (CardView) findViewById(R.id.electronicCard);
         maidCard=(CardView) findViewById(R.id.maidsCard);
         aboutusCard=(CardView) findViewById(R.id.aboutusCard);
+        dometigoname=(TextView) findViewById(R.id.DomestiGoName) ;
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        String uid=user.getUid();
+        DatabaseReference userNameRef = FirebaseDatabase.getInstance().getReference("users").child(uid).child("name");
+        userNameRef.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                String name = dataSnapshot.getValue(String.class);
+                // Do something with the user's name
+                dometigoname.setText("Hello "+name+"!");
+
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+                // Handle errors
+            }
+        });
+
         assessCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

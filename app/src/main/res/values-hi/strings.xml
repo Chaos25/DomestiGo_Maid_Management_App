@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DomestiGoV1</string>
+    <string name="login">लॉग इन करें</string>
+    <string name="email">ईमेल</string>
+    <string name="password">पासवर्ड</string>
+    <string name="not_yet_registered_sign_up">अभी तक पंजीकृत नहीं किया गया? साइन अप करें।</string>
+    <string name="change_language">भाषा बदलें</string>
+    <string name="maid_login">नौकरानी लॉगिन</string>
+    <string name="one_stop_solution_for_all_your_household_requirements">आपकी सभी घरेलू आवश्यकताओं के लिए एक स्थान पर समाधान</string>
+    <string name="maids">नौकरानियों</string>
+    <string name="about_us">हमारे बारे में</string>
+    <string name="assessment">आकलन</string>
+    <string name="profile">प्रोफ़ाइल</string>
+    <string name="domestigo_is_an_app_that_helps_users_find_maids_nearby_book_them_on_a_daily_weekly_or_monthly_basis_it_also_has_location_based_services_to_find_the_maids_a_feature_for_users_to_review_their_hired_maids_and_so_on_we_aim_to_make_it_a_norm_for_hiring_domestic_help_in_urban_neighborhoods_we_are_college_students_trying_to_make_this_app_accessible_to_everyone_and_make_everyone_s_lives_easier">डोमेस्टिगो एक ऐसा ऐप है जो उपयोगकर्ताओं को नौकरानियों को आस-पास खोजने में मदद करता है, उन्हें दैनिक, साप्ताहिक या मासिक आधार पर बुक करता है। इसमें नौकरानियों को खोजने के लिए स्थान-आधारित सेवाएं भी हैं, उपयोगकर्ताओं के लिए उनकी किराए की नौकरानियों की समीक्षा करने की सुविधा, और इसी तरह। हमारा लक्ष्य शहरी इलाकों में घरेलू नौकरों को काम पर रखने के लिए इसे एक मानक बनाना है। हम कॉलेज के छात्र हैं जो इस ऐप को सभी के लिए सुलभ बनाने और सभी के जीवन को आसान बनाने की कोशिश कर रहे हैं। और इसे करते हुए कूल दिखें।</string>
+    <string name="our_team">हमारी टीम</string>
+    <string name="kushal">कुशल</string>
+    <string name="riddhi">रिद्धि</string>
+    <string name="anoushka">अनुष्का</string>
+    <string name="sign_up">साइन अप करें</string>
+    <string name="name">नाम</string>
+    <string name="maid_sign_up">नौकरानी साइन अप</string>
+    <string name="location">जगह</string>
+    <string name="appointments">नियुक्ति</string>
+    <string name="rating">रेटिंग</string>
+    <string name="language">"भाषा "</string>
+    <string name="ghapshap">गपशप</string>
+</resources>

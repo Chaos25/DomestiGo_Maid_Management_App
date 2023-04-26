@@ -47,7 +47,7 @@
                 android:layout_height="wrap_content"
 
                 android:fontFamily="@font/poppins"
-                android:text="Sign Up"
+                android:text="@string/sign_up"
                 android:textAlignment="center"
                 android:textColor="@color/domesticgored"
                 android:textSize="30dp" />
@@ -60,7 +60,7 @@
                 android:drawableLeft="@drawable/baseline_person_24"
                 android:textColorHint="@color/grey"
                 android:drawablePadding="8dp"
-                android:hint="Name"
+                android:hint="@string/name"
                 android:padding="8dp"
                 android:textColor="@color/black"
                 android:textColorHighlight="@color/cardview_dark_background" />
@@ -73,7 +73,7 @@
                 android:drawableLeft="@drawable/baseline_email_24"
                 android:textColorHint="@color/grey"
                 android:drawablePadding="8dp"
-                android:hint="Email"
+                android:hint="@string/email"
                 android:padding="8dp"
                 android:textColor="@color/black"
                 android:textColorHighlight="@color/cardview_dark_background" />
@@ -90,7 +90,7 @@
                 android:background="@drawable/custom_edittext"
                 android:drawableLeft="@drawable/baseline_lock_24"
                 android:drawablePadding="8dp"
-                android:hint="Password"
+                android:hint="@string/password"
                 android:inputType="textPassword"
                 android:padding="8dp"
                 android:textColor="@color/black"
@@ -103,7 +103,7 @@
                 android:layout_marginTop="20dp"
 
                 android:backgroundTint="@color/domesticgored"
-                android:text="sign up"
+                android:text="@string/sign_up"
                 android:textColor="@color/projectwhite"
                 android:textSize="18sp"
                 app:cornerRadius="20dp" />

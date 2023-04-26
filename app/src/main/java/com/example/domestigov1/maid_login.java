@@ -30,10 +30,10 @@ public class maid_login extends AppCompatActivity {
 
 
         mAuth = FirebaseAuth.getInstance();
-        emailTextView =(TextView) findViewById(R.id.username);
+        emailTextView =(TextView) findViewById(R.id.usernamemaid);
 
-        passwordTextView =(TextView) findViewById(R.id.password);
-        loginbtn= (Button) findViewById(R.id.loginButton);
+        passwordTextView =(TextView) findViewById(R.id.passwordmaid);
+        loginbtn= (Button) findViewById(R.id.loginButtonmaid);
 
 
 
@@ -94,7 +94,7 @@ public class maid_login extends AppCompatActivity {
                                     // intent to home activity
                                     Intent intent
                                             = new Intent(maid_login.this,
-                                            dashboard.class);
+                                            maid_dashboard.class);
                                     startActivity(intent);
                                 }
 

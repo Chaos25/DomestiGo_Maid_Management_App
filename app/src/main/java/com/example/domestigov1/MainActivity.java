@@ -3,6 +3,9 @@ package com.example.domestigov1;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -15,6 +18,8 @@ import com.google.firebase.auth.AuthResult;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 
+import java.util.Locale;
+
 
 public class MainActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
@@ -23,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView passwordTextView ;
 
     private Button loginbtn;
+    TextView changeLanguage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,8 +42,13 @@ public class MainActivity extends AppCompatActivity {
         passwordTextView =(TextView) findViewById(R.id.password);
         loginbtn= (Button) findViewById(R.id.loginButton);
 
-
-
+        changeLanguage=findViewById(R.id.changeLanguage);
+        changeLanguage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                changeLanguage();
+            }
+        });
 
         //admin and admin
         loginbtn.setOnClickListener(new View.OnClickListener() {
@@ -64,6 +75,39 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+    }
+    private void changeLanguage() {
+        final String languages[]={"English","Hindi","Kannada"};
+        AlertDialog.Builder mBuilder=new AlertDialog.Builder(this);
+        mBuilder.setTitle("Choose Language");
+        mBuilder.setSingleChoiceItems(languages, -1, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                if(i==0){
+                    setLocale("");
+                    recreate();
+                }
+                else if(i==1){
+                    setLocale("hi");
+                    recreate();
+                } else if (i==2) {
+                    setLocale("kn");
+                    recreate();
+
+                }
+
+            }
+        });
+        mBuilder.create();
+        mBuilder.show();
+    }
+
+    private void setLocale(String langauge) {
+        Locale locale=new Locale(langauge);
+        Locale.setDefault(locale);
+        Configuration configuration=new Configuration();
+        configuration.locale=locale;
+        getBaseContext().getResources().updateConfiguration(configuration,getBaseContext().getResources().getDisplayMetrics());
     }
     private void loginUserAccount(){
         String email, password;

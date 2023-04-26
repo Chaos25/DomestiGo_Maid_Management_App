@@ -18,32 +18,38 @@
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
         android:fontFamily="@font/poppins"
-        android:text="About Us"
+        android:text="@string/about_us"
         android:textColor="@color/projectwhite"
         android:textSize="40sp" />
+
     <TextView
+        android:id="@+id/aboutus_info"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="DomestiGo is an app that helps users find maids nearby, book them on a daily, weekly or monthly basis. It also has location-based services to find the maids, a feature for users to review their hired maids, and so on. We aim to make it a norm for hiring domestic help in urban neighborhoods. We are college students trying to make this app accessible to everyone and make everyone's lives easier."
         android:layout_below="@id/aboutusText"
-        android:layout_margin="10dp"
-        android:textColor="@color/projectwhite"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
         android:padding="10dp"
-        android:textSize="18sp"
-        android:id="@+id/aboutus_info"
-        />
+        android:text="@string/domestigo_is_an_app_that_helps_users_find_maids_nearby_book_them_on_a_daily_weekly_or_monthly_basis_it_also_has_location_based_services_to_find_the_maids_a_feature_for_users_to_review_their_hired_maids_and_so_on_we_aim_to_make_it_a_norm_for_hiring_domestic_help_in_urban_neighborhoods_we_are_college_students_trying_to_make_this_app_accessible_to_everyone_and_make_everyone_s_lives_easier"
+        android:textColor="@color/projectwhite"
+        android:textSize="18sp" />
+
     <TextView
+        android:id="@+id/team_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/aboutus_info"
-        android:text="Our Team"
-        android:textSize="30sp"
-        android:textColor="@color/projectwhite"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
         android:fontFamily="@font/poppins"
-        android:layout_margin="10dp"
         android:padding="10dp"
-        android:id="@+id/team_label"
-        />
+        android:text="@string/our_team"
+        android:textColor="@color/projectwhite"
+        android:textSize="30sp" />
 
     <RelativeLayout
         android:layout_width="wrap_content"
@@ -74,7 +80,7 @@
             android:layout_marginBottom="10dp"
             android:fontFamily="@font/poppins"
             android:padding="5dp"
-            android:text="Kushal"
+            android:text="@string/kushal"
             android:textColor="@color/projectwhite"
             android:textSize="20dp" />
     </RelativeLayout>
@@ -109,7 +115,7 @@
             android:layout_marginBottom="10dp"
             android:fontFamily="@font/poppins"
             android:padding="5dp"
-            android:text="Riddhi"
+            android:text="@string/riddhi"
             android:textColor="@color/projectwhite"
             android:textSize="20dp" />
     </RelativeLayout>
@@ -127,18 +133,21 @@
            android:layout_marginTop="15dp"
            android:layout_marginBottom="15dp"
            android:src="@drawable/team2" />
+
        <TextView
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
            android:layout_below="@id/anoushka"
-           android:text="Anoushka"
            android:layout_centerInParent="true"
-           android:layout_margin="10dp"
-           android:padding="5dp"
-           android:textSize="20dp"
-           android:textColor="@color/projectwhite"
+           android:layout_marginStart="10dp"
+           android:layout_marginTop="10dp"
+           android:layout_marginEnd="10dp"
+           android:layout_marginBottom="10dp"
            android:fontFamily="@font/poppins"
-           />
+           android:padding="5dp"
+           android:text="@string/anoushka"
+           android:textColor="@color/projectwhite"
+           android:textSize="20dp" />
 
    </RelativeLayout>
 
