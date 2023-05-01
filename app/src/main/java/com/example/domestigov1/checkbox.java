@@ -9,6 +9,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import java.util.ArrayList;
 
 public class checkbox extends AppCompatActivity implements View.OnClickListener {
@@ -67,11 +73,18 @@ public class checkbox extends AppCompatActivity implements View.OnClickListener 
         mybtn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                DatabaseReference questionnaireRef = FirebaseDatabase.getInstance().getReference("questionnaire");
+                FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+                if(user != null) {
+                    DatabaseReference userChoicesRef = questionnaireRef.child(user.getUid()).child("choices");
+                    userChoicesRef.setValue(selectedCheckboxes);
+                }
                 Intent intn=new Intent(checkbox.this,Questionnaire.class);
                 startActivity(intn);
             }
         });
     }
+
 
     @Override
     public void onClick(View view) {

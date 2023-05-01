@@ -48,7 +48,7 @@ public class MapsActivity extends AppCompatActivity  {
     SupportMapFragment smf;
     FusedLocationProviderClient client;
     Button b1;
-
+    String city;
     TextView citytag;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,14 +57,15 @@ public class MapsActivity extends AppCompatActivity  {
         smf = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
         client = LocationServices.getFusedLocationProviderClient(this);
         b1= (Button) findViewById(R.id.button_find_maids);
+
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent myintent= new Intent(MapsActivity.this,maid_profile.class);
+                myintent.putExtra("city",city);
                 startActivity(myintent);
             }
         });
-
         Dexter.withContext(getApplicationContext())
                 .withPermission(Manifest.permission.ACCESS_FINE_LOCATION)
                 .withListener(new PermissionListener() {
@@ -114,7 +115,7 @@ public class MapsActivity extends AppCompatActivity  {
                             Geocoder geocoder=new Geocoder(getApplicationContext(), Locale.getDefault());
                             List<Address> addresses= geocoder.getFromLocation(latLng.latitude, latLng.longitude, 1);
                             if(!addresses.isEmpty()){
-                                String city= addresses.get(0).getLocality();
+                                city= addresses.get(0).getLocality();
 //                                Toast.makeText(getApplicationContext(),city,Toast.LENGTH_SHORT).show();
                                 citytag=findViewById(R.id.citytag);
                                 citytag.setText("City: "+city);

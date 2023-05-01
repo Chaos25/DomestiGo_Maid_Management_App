@@ -81,8 +81,11 @@
                  android:layout_width="wrap_content"
                  android:layout_height="wrap_content"
                  android:layout_below="@id/maid_name_label1"
-                android:layout_margin="10dp"
 
+                 android:layout_marginStart="10dp"
+                 android:layout_marginTop="10dp"
+                 android:layout_marginEnd="10dp"
+                 android:layout_marginBottom="10dp"
                  android:fontFamily="@font/poppins"
                  android:text="Age: "
                  android:textColor="@color/domesticgored"
@@ -115,17 +118,20 @@
                  />
 
              <TextView
+                 android:id="@+id/maid_exp1"
                  android:layout_width="wrap_content"
                  android:layout_height="wrap_content"
                  android:layout_below="@id/maid_age1"
                  android:layout_alignBaseline="@id/maid_exp_label1"
-                 android:layout_margin="10dp"
+                 android:layout_marginStart="10dp"
+                 android:layout_marginTop="10dp"
+                 android:layout_marginEnd="10dp"
+                 android:layout_marginBottom="10dp"
                  android:layout_toRightOf="@id/maid_exp_label1"
                  android:fontFamily="@font/poppins"
                  android:text="4+ Years"
                  android:textColor="@color/domesticgored"
-                 android:textSize="15dp"
-                 android:id="@+id/maid_exp1"/>
+                 android:textSize="15dp" />
 
              <TextView
                  android:id="@+id/maid_services_label1"

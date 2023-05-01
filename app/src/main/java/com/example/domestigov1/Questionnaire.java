@@ -10,6 +10,13 @@ import android.widget.TextView;
 import android.app.AlertDialog;
 import android.graphics.Color;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.ArrayList;
+
 public class Questionnaire extends AppCompatActivity implements View.OnClickListener {
     TextView questionT;
     Button A,B,C,D;
@@ -17,6 +24,9 @@ public class Questionnaire extends AppCompatActivity implements View.OnClickList
     int curr=0;
     String ans="";
     String fin="";
+    ArrayList<String> choices2 = new ArrayList<String>();
+    FirebaseUser mUser;
+    DatabaseReference mDatabase;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,6 +45,9 @@ public class Questionnaire extends AppCompatActivity implements View.OnClickList
         loadNewQuestion();
 
 
+
+        mDatabase = FirebaseDatabase.getInstance().getReference();
+
     }
 
     @Override
@@ -46,6 +59,7 @@ public class Questionnaire extends AppCompatActivity implements View.OnClickList
         Button clicked=(Button) view;
         if(clicked.getId()==R.id.b1){
             fin+=ans;
+            choices2.add(ans);
             curr++;
             loadNewQuestion();
         }
@@ -66,6 +80,14 @@ public class Questionnaire extends AppCompatActivity implements View.OnClickList
         D.setText(Question_ans.choices[curr][3]);
     }
     void finishQuiz(){
+        mUser=FirebaseAuth.getInstance().getCurrentUser();
+        String uid = mUser.getUid();
+        String time = choices2.get(0);
+        String locality = choices2.get(1); // Replace with the user's selected locality
+        String frequency = choices2.get(2); // Replace with the user's selected frequency
+        mDatabase.child("questionnaire").child(uid).child("choices2").child("time").setValue(time);
+        mDatabase.child("questionnaire").child(uid).child("choices2").child("locality").setValue(locality);
+        mDatabase.child("questionnaire").child(uid).child("choices2").child("frequency").setValue(frequency);
 
         new AlertDialog.Builder(this)
                 .setTitle("Application status")
