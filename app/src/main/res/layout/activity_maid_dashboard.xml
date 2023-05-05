@@ -78,7 +78,7 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:id="@+id/maidsCard"
+                android:id="@+id/appointmentsCard"
                 android:layout_margin="10dp"
                 app:cardBackgroundColor="@color/projectwhite"
                 android:layout_weight="1"
@@ -115,7 +115,7 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:id="@+id/electronicCard"
+                android:id="@+id/forumCard"
                 app:cardBackgroundColor="@color/projectwhite"
                 android:layout_margin="10dp"
                 android:layout_weight="1"

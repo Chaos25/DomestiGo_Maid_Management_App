@@ -5,6 +5,7 @@ import androidx.cardview.widget.CardView;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.View;
@@ -12,7 +13,7 @@ import android.view.View;
 import java.util.Locale;
 
 public class maid_dashboard extends AppCompatActivity {
-    private CardView changeLanguage;
+    private CardView changeLanguage,appointmentsCard,forumCard;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,6 +25,24 @@ public class maid_dashboard extends AppCompatActivity {
                 changeLanguage();
             }
         });
+        appointmentsCard=(CardView) findViewById(R.id.appointmentsCard);
+        appointmentsCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent myintent = new Intent(maid_dashboard.this,appointments.class);
+                startActivity(myintent);
+            }
+        });
+        forumCard=(CardView) findViewById(R.id.forumCard);
+        forumCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent myintent1 = new Intent(maid_dashboard.this,forum.class);
+                startActivity(myintent1);
+            }
+        });
+
+
     }
     private void changeLanguage() {
         final String languages[]={"English","Hindi","Kannada"};
