@@ -1,0 +1,66 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/popup_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/domesticgored"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></LinearLayout>
+        <TextView
+            android:id="@+id/popup_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Choose frequency:"
+            android:textColor="@color/projectwhite"
+            android:textSize="18sp" />
+
+        <RadioGroup
+            android:id="@+id/frequency_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/one_day_radio_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="One Day - 200Rs"
+                android:textColor="@color/projectwhite"/>
+
+            <RadioButton
+                android:id="@+id/monthly_radio_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Monthly - 1200Rs"
+                android:textColor="@color/projectwhite"/>
+
+        </RadioGroup>
+        <DatePicker
+            android:id="@+id/date_picker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:calendarTextColor="@color/projectwhite"
+            />
+
+        <TimePicker
+            android:id="@+id/time_picker"
+            android:layout_width="wrap_content"
+            android:layout_height="120dp"
+            android:numbersInnerTextColor="@color/projectwhite"
+            android:numbersSelectorColor="@color/projectwhite"
+            android:numbersTextColor="@color/projectwhite"
+
+            android:timePickerMode="spinner"/>
+        <Button
+            android:id="@+id/submit_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:textColor="@color/domesticgored"
+            android:backgroundTint="@color/projectwhite"/>
+
+
+
+</LinearLayout>

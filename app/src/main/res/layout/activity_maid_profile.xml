@@ -160,17 +160,20 @@
                  android:textColor="@color/domesticgored"
                  android:textSize="15dp"
                  android:id="@+id/maid_services1"/>
+
              <Button
+                 android:id="@+id/button1"
                  android:layout_width="wrap_content"
                  android:layout_height="wrap_content"
                  android:layout_below="@id/maid_services1"
                  android:layout_centerHorizontal="true"
-                 android:layout_margin="25dp"
-                 android:text="Hire"
-                 android:textColor="@color/projectwhite"
+                 android:layout_marginStart="25dp"
+                 android:layout_marginTop="25dp"
+                 android:layout_marginEnd="25dp"
+                 android:layout_marginBottom="25dp"
                  android:backgroundTint="@color/domesticgored"
-                 android:id="@+id/button1"
-                 />
+                 android:text="Hire"
+                 android:textColor="@color/projectwhite" />
 
          </RelativeLayout>
 

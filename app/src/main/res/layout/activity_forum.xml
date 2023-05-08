@@ -11,6 +11,7 @@
         android:layout_height="match_parent"
         android:layout_above="@id/messageBoxLayout"
         android:layout_alignParentTop="true"
+        android:background="@color/domesticgored"
         android:padding="10dp" />
 
     <RelativeLayout
@@ -28,6 +29,7 @@
             android:layout_alignParentLeft="true"
             android:layout_toLeftOf="@+id/sendButton"
             android:hint="Enter message here"
+            android:textColor="@color/black"
             android:padding="5dp" />
 
         <Button
@@ -37,8 +39,8 @@
             android:layout_alignParentRight="true"
             android:layout_alignParentTop="true"
             android:text="Send"
-            android:textColor="@android:color/white"
-            android:background="@android:color/holo_blue_dark"
+            android:textColor="@color/projectwhite"
+            android:backgroundTint="@color/domesticgored"
             android:padding="10dp" />
 
     </RelativeLayout>
