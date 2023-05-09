@@ -30,4 +30,10 @@
     <string name="name1">Name:</string>
     <string name="email1">Email:</string>
     <string name="your_maids">Your Maids</string>
+    <string name="find_maids_nearby">Find Maids Nearby</string>
+    <string name="experience">Experience:</string>
+    <string name="rating1">Rating:</string>
+    <string name="services">Services:</string>
+    <string name="hire">Hire</string>
+    <string name="maid_profiles">Maid Profiles</string>
 </resources>

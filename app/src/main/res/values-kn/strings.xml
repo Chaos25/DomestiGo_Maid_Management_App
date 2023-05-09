@@ -31,4 +31,10 @@
     <string name="name1">" ಹೆಸರು:"</string>
     <string name="email1">ಇಮೇಲ್:</string>
     <string name="your_maids">ನಿಮ್ಮ ದಾಸಿಯರು</string>
+    <string name="find_maids_nearby">ದಾಸಿಯರನ್ನು ಹುಡುಕಿ</string>
+    <string name="experience">" ಅನುಭವ:"</string>
+    <string name="rating1">" ರೇಟಿಂಗ್:"</string>
+    <string name="services">ಸೇವೆಗಳು:</string>
+    <string name="hire">ಈಗ ನೇಮಿಸಿ</string>
+    <string name="maid_profiles">ಸೇವಕಿ ಪ್ರೊಫೈಲ್ಗಳು</string>
 </resources>

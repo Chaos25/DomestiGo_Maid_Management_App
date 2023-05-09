@@ -40,7 +40,8 @@ import java.util.Map;
 public class maid_profile extends AppCompatActivity {
 
     String location1;
-    TextView name1,exp1,services1,name2,exp2,services2;
+
+    TextView name1,exp1,services1,name2,exp2,services2,rating1,rating2;
     Button hire1,hire2;
     DatabaseReference maidsRef;
     private String maidUid;
@@ -60,6 +61,8 @@ public class maid_profile extends AppCompatActivity {
         services2=(TextView) findViewById(R.id.maid_services2);
         hire1 = (Button) findViewById(R.id.button1);
         hire2 = (Button) findViewById(R.id.button2);
+        rating1 = (TextView) findViewById(R.id.maid_age1);
+        rating2 = (TextView) findViewById(R.id.maid_age2);
 
         Intent myintent1= getIntent();
         location1=myintent1.getStringExtra("city");
@@ -80,16 +83,29 @@ public class maid_profile extends AppCompatActivity {
                         String name = dataSnapshot.child("name").getValue(String.class);
                         String experience = dataSnapshot.child("experience").getValue(String.class);
                         String services = dataSnapshot.child("services").getValue(String.class);
+                        Double avgRating = dataSnapshot.child("ratings").child("avgRating").getValue(Double.class);
 
                         if (i == 1) {
                             name1.setText(name);
                             exp1.setText(experience);
                             services1.setText(services);
+                            if (avgRating != null) {
+                                // Round off the rating to 1 decimal place
+                                String formattedRating = String.format("%.1f", avgRating);
+                                // Set the formatted rating to the ratingText TextView
+                                rating1.setText(formattedRating);
+                            }
                             maid1Snapshot = dataSnapshot;
                         } else if (i == 2) {
                             name2.setText(name);
                             exp2.setText(experience);
                             services2.setText(services);
+                            if (avgRating != null) {
+                                // Round off the rating to 1 decimal place
+                                String formattedRating = String.format("%.1f", avgRating);
+                                // Set the formatted rating to the ratingText TextView
+                                rating2.setText(formattedRating);
+                            }
                             maid2Snapshot = dataSnapshot;
                             break;
                         }

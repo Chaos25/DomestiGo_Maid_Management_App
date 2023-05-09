@@ -31,4 +31,10 @@
     <string name="name1">नाम:</string>
     <string name="email1">ईमेल:</string>
     <string name="your_maids">आपकी नौकरानियाँ</string>
+    <string name="find_maids_nearby">नौकरानियों को खोजें</string>
+    <string name="experience">अनुभव:</string>
+    <string name="rating1">रेटिंग:</string>
+    <string name="services">सेवाएं:</string>
+    <string name="hire">काम पर रखो</string>
+    <string name="maid_profiles">" नौकरानी प्रोफाइल"</string>
 </resources>

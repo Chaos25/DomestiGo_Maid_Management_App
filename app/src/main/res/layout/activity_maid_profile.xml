@@ -21,7 +21,7 @@
             android:layout_marginEnd="20dp"
             android:layout_marginBottom="20dp"
             android:fontFamily="@font/poppins"
-            android:text="Maid Profiles"
+            android:text="@string/maid_profiles"
             android:textColor="@color/projectwhite"
             android:textSize="25dp" />
 
@@ -59,7 +59,7 @@
                  android:layout_marginEnd="10dp"
                  android:layout_marginBottom="10dp"
                  android:fontFamily="@font/poppins"
-                 android:text="Name: "
+                 android:text="@string/name1"
                  android:textColor="@color/domesticgored"
                  android:textSize="18dp" />
 
@@ -90,23 +90,25 @@
                  android:layout_marginEnd="10dp"
                  android:layout_marginBottom="10dp"
                  android:fontFamily="@font/poppins"
-                 android:text="Age: "
+                 android:text="@string/rating1"
                  android:textColor="@color/domesticgored"
                  android:textSize="18dp" />
 
              <TextView
+                 android:id="@+id/maid_age1"
                  android:layout_width="wrap_content"
                  android:layout_height="wrap_content"
                  android:layout_below="@id/maid_name1"
                  android:layout_alignBaseline="@id/maid_age_label1"
-                 android:layout_margin="10dp"
-                 android:layout_toRightOf="@id/maid_age_label1"
                  android:layout_alignStart="@id/maid_name1"
+                 android:layout_marginStart="10dp"
+                 android:layout_marginTop="10dp"
+                 android:layout_marginEnd="10dp"
+                 android:layout_marginBottom="10dp"
+                 android:layout_toRightOf="@id/maid_age_label1"
                  android:fontFamily="@font/poppins"
-                 android:text="21"
                  android:textColor="@color/domesticgored"
-                 android:textSize="15dp"
-                 android:id="@+id/maid_age1"/>
+                 android:textSize="15dp" />
 
              <TextView
                  android:id="@+id/maid_exp_label1"
@@ -119,7 +121,7 @@
                  android:layout_marginEnd="10dp"
                  android:layout_marginBottom="10dp"
                  android:fontFamily="@font/poppins"
-                 android:text="Experience: "
+                 android:text="@string/experience"
                  android:textColor="@color/domesticgored"
                  android:textSize="18dp" />
 
@@ -150,7 +152,7 @@
                  android:layout_marginBottom="10dp"
 
                  android:fontFamily="@font/poppins"
-                 android:text="Services: "
+                 android:text="@string/services"
                  android:textColor="@color/domesticgored"
                  android:textSize="18dp" />
 
@@ -178,7 +180,7 @@
                  android:layout_marginEnd="25dp"
                  android:layout_marginBottom="25dp"
                  android:backgroundTint="@color/domesticgored"
-                 android:text="Hire"
+                 android:text="@string/hire"
                  android:textColor="@color/projectwhite" />
 
          </RelativeLayout>
@@ -211,10 +213,13 @@
                     android:id="@+id/maid_name_label2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
                     android:layout_below="@id/maid_image2"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
                     android:fontFamily="@font/poppins"
-                    android:text="Name: "
+                    android:text="@string/name1"
                     android:textColor="@color/domesticgored"
                     android:textSize="18dp" />
 
@@ -236,10 +241,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/maid_name_label2"
-                    android:layout_margin="10dp"
 
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
                     android:fontFamily="@font/poppins"
-                    android:text="Age: "
+                    android:text="@string/rating1"
                     android:textColor="@color/domesticgored"
                     android:textSize="18dp" />
 
@@ -252,7 +260,6 @@
                     android:layout_toRightOf="@id/maid_age_label2"
                     android:layout_alignStart="@id/maid_name2"
                     android:fontFamily="@font/poppins"
-                    android:text="21"
                     android:textColor="@color/domesticgored"
                     android:textSize="15dp"
                     android:id="@+id/maid_age2"/>
@@ -264,7 +271,7 @@
                     android:layout_below="@id/maid_age_label2"
                     android:layout_margin="10dp"
                     android:fontFamily="@font/poppins"
-                    android:text="Experience: "
+                    android:text="@string/experience"
                     android:textColor="@color/domesticgored"
                     android:textSize="18dp" />
 
@@ -288,7 +295,7 @@
                     android:layout_below="@id/maid_exp_label2"
                     android:layout_margin="10dp"
                     android:fontFamily="@font/poppins"
-                    android:text="Services: "
+                    android:text="@string/services"
                     android:textColor="@color/domesticgored"
                     android:textSize="18dp" />
 
@@ -310,7 +317,7 @@
                     android:layout_below="@id/maid_services2"
                     android:layout_centerHorizontal="true"
                     android:layout_margin="25dp"
-                    android:text="Hire"
+                    android:text="@string/hire"
                     android:textColor="@color/projectwhite"
                     android:backgroundTint="@color/domesticgored"
                     android:id="@+id/button2"

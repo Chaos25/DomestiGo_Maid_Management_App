@@ -34,7 +34,7 @@
         android:layout_below="@+id/citytag"
         android:layout_margin="10dp"
         android:layout_centerHorizontal="true"
-        android:text="Find Maids Nearby"
+        android:text="@string/find_maids_nearby"
         android:id="@+id/button_find_maids"
         android:backgroundTint="@color/projectwhite"
         android:textColor="@color/domesticgored"
