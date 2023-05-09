@@ -25,4 +25,10 @@
     <string name="rating">रेटिंग</string>
     <string name="language">"भाषा "</string>
     <string name="ghapshap">गपशप</string>
+    <string name="date">तारीख:</string>
+    <string name="time">समय:</string>
+    <string name="location1">" जगह:"</string>
+    <string name="name1">नाम:</string>
+    <string name="email1">ईमेल:</string>
+    <string name="your_maids">आपकी नौकरानियाँ</string>
 </resources>

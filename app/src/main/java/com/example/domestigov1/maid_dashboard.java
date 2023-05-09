@@ -9,11 +9,21 @@ import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.Locale;
 
 public class maid_dashboard extends AppCompatActivity {
     private CardView changeLanguage,appointmentsCard,forumCard;
+    private TextView ratingtext;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,6 +51,29 @@ public class maid_dashboard extends AppCompatActivity {
                 startActivity(myintent1);
             }
         });
+        ratingtext = (TextView) findViewById(R.id.ratingText);
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        String maidUid = user.getUid();
+        DatabaseReference maidRef = FirebaseDatabase.getInstance().getReference("maids").child(maidUid).child("ratings").child("avgRating");
+        maidRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                Double avgRating = dataSnapshot.getValue(Double.class);
+                if (avgRating != null) {
+                    // Round off the rating to 1 decimal place
+                    String formattedRating = String.format("%.1f", avgRating);
+                    // Set the formatted rating to the ratingText TextView
+                    ratingtext.setText(formattedRating);
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+                // Handle database error
+            }
+        });
+
+
 
 
     }
@@ -77,4 +110,6 @@ public class maid_dashboard extends AppCompatActivity {
         configuration.locale=locale;
         getBaseContext().getResources().updateConfiguration(configuration,getBaseContext().getResources().getDisplayMetrics());
     }
+
+
 }

@@ -17,6 +17,10 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class appointments extends AppCompatActivity {
 
     private TextView date1TextView, time1TextView, location1TextView,
@@ -61,14 +65,17 @@ public class appointments extends AppCompatActivity {
                         if (muid.equals(maidUid)) {
                             String date = dataSnapshot1.child("date").getValue(String.class);
                             String time = dataSnapshot1.child("time").getValue(String.class);
+
                             Log.d("appointments", "Appointment " + i + " date: " + date);
                             Log.d("appointments", "Appointment " + i + " time: " + time);
                             if (i == 1) {
                                 date1TextView.setText(date);
                                 time1TextView.setText(time);
+                                location1TextView.setText("Manipal");
                             } else if (i == 2) {
                                 date2TextView.setText(date);
                                 time2TextView.setText(time);
+                                location2TextView.setText("Manipal");
                                 break;
                             }
                             i++;
@@ -86,34 +93,6 @@ public class appointments extends AppCompatActivity {
                 Log.e("MaidProfile", "Failed to read value.", error.toException());
             }
         });
-//        DatabaseReference database = FirebaseDatabase.getInstance().getReference().child("appointments");
-//        Query query = database.orderByChild("maidUid").equalTo(maidUid);
-//        query.addListenerForSingleValueEvent(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(@NonNull DataSnapshot snapshot) {
-//                int i = 1;
-//                for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
-//                    String date = dataSnapshot.child("date").getValue(String.class);
-//                    String time = dataSnapshot.child("time").getValue(String.class);
-//                    if (i == 1) {
-//                        date1TextView.setText(date);
-//                        time1TextView.setText(time);
-//                    } else if (i == 2) {
-//                        date2TextView.setText(date);
-//                        time2TextView.setText(time);
-//                        break;
-//                    }
-//                    i++;
-//                }
-//            }
-//
-//            @Override
-//            public void onCancelled(@NonNull DatabaseError error) {
-//                Log.e("MaidProfile", "Failed to read value.", error.toException());
-//            }
-//        });
-
-
 
 
 

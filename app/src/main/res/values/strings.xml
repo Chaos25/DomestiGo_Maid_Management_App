@@ -24,4 +24,10 @@
     <string name="rating">Rating</string>
     <string name="language">Language</string>
     <string name="ghapshap">GhapShap</string>
+    <string name="date">Date:</string>
+    <string name="time">Time:</string>
+    <string name="location1">Location:</string>
+    <string name="name1">Name:</string>
+    <string name="email1">Email:</string>
+    <string name="your_maids">Your Maids</string>
 </resources>
