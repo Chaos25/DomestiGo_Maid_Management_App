@@ -34,7 +34,10 @@ import com.google.firebase.database.ValueEventListener;
 
 import org.w3c.dom.Text;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class maid_profile extends AppCompatActivity {
@@ -70,49 +73,122 @@ public class maid_profile extends AppCompatActivity {
 
         DatabaseReference database = FirebaseDatabase.getInstance().getReference().child("maids");
 
+//        database.addListenerForSingleValueEvent(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(@NonNull DataSnapshot snapshot) {
+//                int i = 1;
+//
+//                for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
+//                    String uid = dataSnapshot.getKey();
+//                    String location = dataSnapshot.child("location").getValue(String.class);
+//
+//                    if (location.equals(location1)) {
+//                        String name = dataSnapshot.child("name").getValue(String.class);
+//                        String experience = dataSnapshot.child("experience").getValue(String.class);
+//                        String services = dataSnapshot.child("services").getValue(String.class);
+//                        Double avgRating = dataSnapshot.child("ratings").child("avgRating").getValue(Double.class);
+//
+//                        if (i == 1) {
+//                            name1.setText(name);
+//                            exp1.setText(experience);
+//                            services1.setText(services);
+//                            if (avgRating != null) {
+//                                // Round off the rating to 1 decimal place
+//                                String formattedRating = String.format("%.1f", avgRating);
+//                                // Set the formatted rating to the ratingText TextView
+//                                rating1.setText(formattedRating);
+//                            }
+//                            maid1Snapshot = dataSnapshot;
+//                        } else if (i == 2) {
+//                            name2.setText(name);
+//                            exp2.setText(experience);
+//                            services2.setText(services);
+//                            if (avgRating != null) {
+//                                // Round off the rating to 1 decimal place
+//                                String formattedRating = String.format("%.1f", avgRating);
+//                                // Set the formatted rating to the ratingText TextView
+//                                rating2.setText(formattedRating);
+//                            }
+//                            maid2Snapshot = dataSnapshot;
+//                            break;
+//                        }
+//                        i++;
+//
+//                    }
+//                }
+//                hire1.setOnClickListener(new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View v) {
+//                        maidUid = maid1Snapshot.getKey();
+//                        maidName = name1.getText().toString();
+//                        showPopup(maidUid,maidName);
+//                    }
+//                });
+//
+//                hire2.setOnClickListener(new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View v) {
+//                        maidUid = maid2Snapshot.getKey();
+//                        maidName = name2.getText().toString();
+//                        showPopup(maidUid,maidName);
+//                    }
+//                });
+//
+//            }
+//
+//            @Override
+//            public void onCancelled(@NonNull DatabaseError error) {
+//                Log.e("MaidProfile", "Failed to read value.", error.toException());
+//            }
+//        });
         database.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                int i = 1;
-
+                List<DataSnapshot> maids = new ArrayList<>();
                 for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
-                    String uid = dataSnapshot.getKey();
                     String location = dataSnapshot.child("location").getValue(String.class);
-
                     if (location.equals(location1)) {
-                        String name = dataSnapshot.child("name").getValue(String.class);
-                        String experience = dataSnapshot.child("experience").getValue(String.class);
-                        String services = dataSnapshot.child("services").getValue(String.class);
-                        Double avgRating = dataSnapshot.child("ratings").child("avgRating").getValue(Double.class);
-
-                        if (i == 1) {
-                            name1.setText(name);
-                            exp1.setText(experience);
-                            services1.setText(services);
-                            if (avgRating != null) {
-                                // Round off the rating to 1 decimal place
-                                String formattedRating = String.format("%.1f", avgRating);
-                                // Set the formatted rating to the ratingText TextView
-                                rating1.setText(formattedRating);
-                            }
-                            maid1Snapshot = dataSnapshot;
-                        } else if (i == 2) {
-                            name2.setText(name);
-                            exp2.setText(experience);
-                            services2.setText(services);
-                            if (avgRating != null) {
-                                // Round off the rating to 1 decimal place
-                                String formattedRating = String.format("%.1f", avgRating);
-                                // Set the formatted rating to the ratingText TextView
-                                rating2.setText(formattedRating);
-                            }
-                            maid2Snapshot = dataSnapshot;
-                            break;
-                        }
-                        i++;
-
+                        maids.add(dataSnapshot);
                     }
                 }
+
+                // Shuffle the list of maids
+                Collections.shuffle(maids);
+
+                // Display the first two maids in the shuffled list
+                for (int i = 0; i < 2 && i < maids.size(); i++) {
+                    DataSnapshot dataSnapshot = maids.get(i);
+                    String name = dataSnapshot.child("name").getValue(String.class);
+                    String experience = dataSnapshot.child("experience").getValue(String.class);
+                    String services = dataSnapshot.child("services").getValue(String.class);
+                    Double avgRating = dataSnapshot.child("ratings").child("avgRating").getValue(Double.class);
+
+                    if (i == 0) {
+                        name1.setText(name);
+                        exp1.setText(experience);
+                        services1.setText(services);
+                        if (avgRating != null) {
+                            // Round off the rating to 1 decimal place
+                            String formattedRating = String.format("%.1f", avgRating);
+                            // Set the formatted rating to the ratingText TextView
+                            rating1.setText(formattedRating);
+                        }
+                        maid1Snapshot = dataSnapshot;
+                    } else if (i == 1) {
+                        name2.setText(name);
+                        exp2.setText(experience);
+                        services2.setText(services);
+                        if (avgRating != null) {
+                            // Round off the rating to 1 decimal place
+                            String formattedRating = String.format("%.1f", avgRating);
+                            // Set the formatted rating to the ratingText TextView
+                            rating2.setText(formattedRating);
+                        }
+                        maid2Snapshot = dataSnapshot;
+                        break;
+                    }
+                }
+
                 hire1.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -130,7 +206,6 @@ public class maid_profile extends AppCompatActivity {
                         showPopup(maidUid,maidName);
                     }
                 });
-
             }
 
             @Override
@@ -138,6 +213,7 @@ public class maid_profile extends AppCompatActivity {
                 Log.e("MaidProfile", "Failed to read value.", error.toException());
             }
         });
+
 
 
     }
