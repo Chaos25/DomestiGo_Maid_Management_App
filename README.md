@@ -28,4 +28,11 @@ DomestiGo is a domestic staff hiring system that aims to revolutionize the domes
 
 DomestiGo simplifies maid management, benefiting both users and maids. Future enhancements may include in-app payments, automated scheduling, more language options, chatbot support, social media integration, AI-based recommendations, and integration with other service providers.
 
+<img width="446" alt="image" src="https://github.com/Chaos25/DomestiGo_Maid_Management_App/assets/91064834/16204d63-2ec6-4df6-b9d7-d7380a120861">
+
+<img width="449" alt="image" src="https://github.com/Chaos25/DomestiGo_Maid_Management_App/assets/91064834/e560932d-afd9-4eea-b537-019e4677f01f">
+
+<img width="449" alt="image" src="https://github.com/Chaos25/DomestiGo_Maid_Management_App/assets/91064834/f8ecc577-5425-416f-9f0b-85777f6b6c18">
+
+
 
