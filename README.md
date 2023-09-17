@@ -1,19 +1,31 @@
-# DomestiGo - Find Domestic Help Nearby
+# DomestiGo - Maid Management System
 
-DomestiGo is an Android app that aims to simplify the process of finding and hiring domestic help. With this app, users can easily find maids and domestic helpers nearby, view their ratings, and hire them for daily, weekly, or monthly basis.
+DomestiGo is a domestic staff hiring system that aims to revolutionize the domestic services industry. It provides users with a seamless and convenient way to find reliable maids near their locality.
 
-## Features
+## Key Features
 
-- Search for domestic helpers nearby
-- View the ratings and reviews of each maid
-- Hire domestic help for daily, weekly or monthly basis
-- Easy and hassle-free process
-- A platform to find trusted and reliable domestic help
+- User-friendly interface for managing domestic services and finding the right maid.
+- Advanced search options, including specifying services, preferred time, and frequency.
+- Location-based recommendations using advanced algorithms.
+- Detailed ratings and reviews to ensure the quality of service.
+- "Gupshup" feature for maids to discuss hirers and share experiences.
+- Language change options (Kannada and Hindi) for maids.
+- Booking management, service history tracking, and rating system for users.
 
-## Getting Started
+## Tech Stack
 
-To use the DomestiGo app, simply download it and create an account. Once you have logged in, you can start searching for domestic help by entering your location and the type of domestic help you require. You can view the ratings and reviews of each maid to help you make an informed decision. After selecting the maid you want to hire, you can choose the duration of the service and make payment through the app.
+- Programming Language: Java
+- Backend Services: Firebase Realtime Database, Firebase Authentication, Firebase Storage
 
-## License
+## Project Design
 
-The DomestiGo app is licensed under the [MIT License](https://opensource.org/licenses/MIT).
+- User Dashboard with options for user profile, finding nearby maids, taking assessments, and more.
+- Assessment module for users to specify service preferences.
+- Maid module with login/signup, profile management, upcoming appointments, and Gupshup forum.
+- Language change module for users to switch between languages (Hindi and Kannada).
+
+## Conclusion and Future Scope
+
+DomestiGo simplifies maid management, benefiting both users and maids. Future enhancements may include in-app payments, automated scheduling, more language options, chatbot support, social media integration, AI-based recommendations, and integration with other service providers.
+
+
